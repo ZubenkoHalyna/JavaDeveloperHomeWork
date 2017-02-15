@@ -7,7 +7,7 @@ DROP TABLE IF EXISTS customers;
 
 CREATE TABLE IF NOT EXISTS skills (
   id INT NOT NULL AUTO_INCREMENT,
-  name VARCHAR(40) NOT NULL,
+  name VARCHAR(40) NOT NULL UNIQUE,
   PRIMARY KEY (id)
 );
 
@@ -26,9 +26,9 @@ CREATE TABLE IF NOT EXISTS customers (
 CREATE TABLE IF NOT EXISTS projects (
   id INT NOT NULL AUTO_INCREMENT,
   name VARCHAR(40) NOT NULL,
-  companieId INT,
+  companyId INT,
   customerId INT,
-  FOREIGN KEY (companieId) REFERENCES companies(id)
+  FOREIGN KEY (companyId) REFERENCES companies(id)
     ON UPDATE CASCADE ON DELETE SET NULL,
   FOREIGN KEY (customerId) REFERENCES customers(id)
     ON UPDATE CASCADE ON DELETE SET NULL,
