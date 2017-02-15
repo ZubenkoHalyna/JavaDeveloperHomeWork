@@ -10,14 +10,14 @@ INSERT INTO projects (name, companyId, customerId) VALUES
   ('Inventory control system',2,1),
   ('Logistics management',1,1);
 
-INSERT INTO developers (firstName, lastName, companyId, projectId) VALUES
-  ('Bolkonsky','Andrey',2,1),
-  ('Bolkonskaya','Marya',2,1),
-  ('Rostova','Natasha',1,2),
-  ('Rostov','Nikolai',1,2),
-  ('Bezukhov','Pierre',2,3),
-  ('Dolokhov','Fedor',2,3),
-  ('Kuragin','Anatole',1,4)
+INSERT INTO developers (firstName, lastName, projectId) VALUES
+  ('Bolkonsky','Andrey',1),
+  ('Bolkonskaya','Marya',1),
+  ('Rostova','Natasha',2),
+  ('Rostov','Nikolai',2),
+  ('Bezukhov','Pierre',2),
+  ('Dolokhov','Fedor',3),
+  ('Kuragin','Anatole',4)
 ;
 
 INSERT INTO developerSkills (developerId, skillId) VALUES
